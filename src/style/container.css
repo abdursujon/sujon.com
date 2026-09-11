@@ -2,7 +2,7 @@
 .container-bg {
   --bg-base: #fafafa;
   --grid-color: rgba(0, 0, 0, 0.03);
-  --blob-1: rgba(147, 197, 253, 0.8);
+  --blob-1: rgba(147, 197, 253, 0.5);
   --blob-2: rgba(253, 230, 211, 0.8);
 
   min-height: 100vh;

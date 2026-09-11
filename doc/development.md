@@ -71,3 +71,19 @@ Step 2: Build the project using REACT + TS + Vite in one go
 npm create vite@latest sujon.com -- --template react-ts
 cd sujon.com
 npm install 
+
+
+Icon collection: 
+phosphoricons.com
+install phosphor: npm install @phosphor-icons/react
+nav: 
+1. Home: <HouseLineIcon size={20} />
+2. CV: <UserCircleIcon size={20} />
+3. Darkmode: <MoonStarsIcon size={20} />
+4. Lightmode: <SunDimIcon size={20} />
+5. Project: <FolderOpenIcon size={20} />
+
+
+5. Github: <GithubLogoIcon size={20} />
+6. Email: <EnvelopeIcon size={20} />
+8. <LinkedinLogoIcon size={20} />
