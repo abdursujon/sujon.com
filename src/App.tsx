@@ -1,8 +1,13 @@
 import { useState } from 'react'
-import './App.css'
+import { Hero } from './sections/Hero'
+import { Container } from './components/layout/Container'
 
 function App() {
-  return ""
+  return(
+  <Container>
+    <Hero/>
+  </Container>
+  )
 }
 
 export default App

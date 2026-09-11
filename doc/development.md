@@ -39,6 +39,16 @@ The distinction lies in their functions: React handles the UI logic and componen
 
 # Tailwind 
 A css framwork helps reduce boiler plate css 
+install: npm install tailwindcss @tailwindcss/vite
+then add the plugin to vite.config.ts
+    import { defineConfig } from 'vite'
+    import react from '@vitejs/plugin-react'
+    import tailwindcss from '@tailwindcss/vite'
+
+    export default defineConfig({
+    plugins: [react(), tailwindcss()],
+    })   
+inside index.css then we add: @import "tailwindcss"
 
 # What is NPM and how to set up node.js 
 # What is vite and how to set up vite and why i need it 
