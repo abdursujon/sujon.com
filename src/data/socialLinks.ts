@@ -11,8 +11,19 @@ export interface SocialLink {
   IconComponent: Icon
 }
 
+const GITHUB_URL = 'https://github.com/your-handle'
+const LINKEDIN_URL = 'https://linkedin.com/in/your-handle'
+const EMAIL_ADDRESS = 'you@example.com'
+
 export const socialLinks: SocialLink[] = [
-  { label: 'GitHub', href: 'https://github.com/your-handle', IconComponent: GithubLogoIcon },
-  { label: 'LinkedIn', href: 'https://linkedin.com/in/your-handle', IconComponent: LinkedinLogoIcon },
-  { label: 'Email', href: 'mailto:you@example.com', IconComponent: EnvelopeSimpleIcon },
+  { label: 'GitHub', href: GITHUB_URL, IconComponent: GithubLogoIcon },
+  { label: 'LinkedIn', href: LINKEDIN_URL, IconComponent: LinkedinLogoIcon },
+  { label: 'Email', href: `mailto:${EMAIL_ADDRESS}`, IconComponent: EnvelopeSimpleIcon },
 ]
+
+export const contactDestinations = {
+  githubUrl: GITHUB_URL,
+  githubHandle: 'your-handle',
+  linkedinUrl: LINKEDIN_URL,
+  emailAddress: EMAIL_ADDRESS,
+}

@@ -1,53 +1,15 @@
-import { CaretRightIcon } from '@phosphor-icons/react'
 import { SectionLabel } from '../components/ui/SectionLabel'
-import { educationEntries } from '../data/education'
+import { ExperienceRow } from '../components/ui/ExperienceRow'
+import { experienceEntries } from '../data/experience'
 
-export function Education() {
+export function Experience() {
   return (
-    <section id="education" className="mx-auto w-full max-w-6xl px-6 py-20">
-      <SectionLabel>Education</SectionLabel>
+    <section id="experience" className="mx-auto w-full max-w-6xl px-6 py-20">
+      <SectionLabel>Internship &amp; Work Experience</SectionLabel>
 
       <ul className="mt-6 flex flex-col gap-4">
-        {educationEntries.map(({ slug, institution, qualification, period, logoUrl, href }) => (
-          <li
-            key={slug}
-            className="flex items-center gap-6 rounded-[40px] border border-transparent bg-white/70 px-8 py-6 shadow-[0_20px_50px_-35px_rgba(25,35,38,0.4)] transition-colors hover:border-accent/40 dark:bg-white/5"
-          >
-            {logoUrl ? (
-              <img
-                src={logoUrl}
-                alt={institution}
-                className="size-14 shrink-0 rounded-full object-contain"
-              />
-            ) : (
-              <div className="size-14 shrink-0 rounded-full bg-ink/5" />
-            )}
-
-            <div className="min-w-0 flex-1">
-              <h3 className="flex items-center gap-2 font-display text-2xl text-ink">
-                {href ? (
-                  <a
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 hover:text-accent"
-                  >
-                    {institution}
-                    <CaretRightIcon size={16} />
-                  </a>
-                ) : (
-                  institution
-                )}
-              </h3>
-              <p className="mt-1 text-sm uppercase tracking-[0.12em] text-ink-muted">
-                {qualification}
-              </p>
-            </div>
-
-            <span className="shrink-0 text-sm uppercase tracking-[0.18em] text-ink-muted">
-              {period}
-            </span>
-          </li>
+        {experienceEntries.map((entry) => (
+          <ExperienceRow key={entry.slug} {...entry} />
         ))}
       </ul>
     </section>

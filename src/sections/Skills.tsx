@@ -6,7 +6,7 @@ export function Skills() {
     <section id="skills" className="mx-auto w-full max-w-6xl px-6 py-20">
       <SectionLabel>Skills</SectionLabel>
 
-      <div className="mt-6 rounded-[32px] border border-ink/5 bg-white/70 p-10 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] dark:bg-white/5">
+      <div className="mt-6 rounded-[32px] border border-ink/5 bg-white/70 p-6 md:p-10 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] dark:bg-white/5">
         <ul className="flex flex-wrap gap-3">
           {skills.map((skill) => (
             <li

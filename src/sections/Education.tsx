@@ -11,7 +11,7 @@ export function Education() {
         {educationEntries.map(({ slug, institution, qualification, period, logoUrl, href }) => (
           <li
             key={slug}
-            className="flex items-center gap-6 rounded-[40px] border border-transparent bg-white/70 px-8 py-6 shadow-[0_20px_50px_-35px_rgba(25,35,38,0.4)] transition-colors hover:border-accent/40 dark:bg-white/5"
+            className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-[40px] border border-transparent bg-white/70 px-6 py-6 shadow-[0_20px_50px_-35px_rgba(25,35,38,0.4)] transition-colors hover:border-accent/40 md:px-8 dark:bg-white/5"
           >
             {logoUrl ? (
               <img
@@ -23,7 +23,7 @@ export function Education() {
               <div className="size-14 shrink-0 rounded-full bg-ink/5" />
             )}
 
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 flex-1 basis-40">
               <h3 className="flex items-center gap-2 font-display text-2xl text-ink">
                 {href ? (
                   <a
@@ -44,7 +44,7 @@ export function Education() {
               </p>
             </div>
 
-            <span className="shrink-0 text-sm uppercase tracking-[0.18em] text-ink-muted">
+            <span className="order-last w-full text-sm uppercase tracking-[0.18em] text-ink-muted md:order-none md:w-auto md:shrink-0 md:text-right">
               {period}
             </span>
           </li>

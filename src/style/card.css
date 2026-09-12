@@ -1,0 +1,34 @@
+.grid-card {
+  --card-bg: color-mix(in oklab, white 72%, transparent);
+  --card-border: rgba(0, 0, 0, 0.06);
+  --card-grid-line: rgba(0, 0, 0, 0.05);
+  --card-grid-cell: 25px;
+
+  position: relative;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-hero-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.grid-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--card-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--card-grid-line) 1px, transparent 1px);
+  background-size: var(--card-grid-cell) var(--card-grid-cell);
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 35%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dark .grid-card {
+  --card-bg: color-mix(in oklab, #152b2b 55%, transparent);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --card-grid-line: rgba(255, 255, 255, 0.04);
+}

@@ -153,3 +153,4 @@ plus rounded-full and object-cover.
 Responsive pass
 12. Collapse the two-column grid to a single centered column below md, image above text.
 
+

@@ -3,7 +3,7 @@ import { InlineLink } from '../components/ui/InlineLink'
 
 export function About() {
   return (
-    <section id="about" className="mx-auto w-full max-w-4xl px-2">
+    <section id="about" className="mx-auto w-full max-w-4xl px-6">
       <SectionLabel>About</SectionLabel>
 
       <div className="mt-10 space-y-6 text-lg leading-relaxed text-ink-muted">

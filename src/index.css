@@ -50,6 +50,18 @@
     background-attachment: fixed, fixed, scroll, scroll;
     transition: background-color 0.3s ease;
   }
+   html {
+    scroll-behavior: smooth;
+  }
+  section[id] {
+    scroll-margin-top: 7rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 }
 
 :root {
