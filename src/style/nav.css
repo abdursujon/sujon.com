@@ -1,57 +1,53 @@
-/* ─── Light mode ─── */
 .nav {
-  --x: 50%;
-  --y: 50%;
-  --drop-size: 100px;
-  --drop-color: rgba(99, 102, 241, 0.12);
-  --nav-bg: #d3d3d3;
-  --nav-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  --nav-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.3);
-  --item-hover-bg: rgba(255, 255, 255, 0.15);
-  --divider-color: rgba(255, 255, 255, 0.2);
+  --nav-glass: color-mix(in oklab, white 70%, transparent);
+  --nav-border: color-mix(in oklab, rgb(184, 176, 176) 55%, transparent);
+  --nav-shadow: 0 26px 90px -50px rgb(25 35 38 / 0.42);
+  --nav-shadow-hover: 0 30px 90px -40px rgb(25 35 38 / 0.55);
+  --drop-color: rgba(151, 187, 192, 0.38);
+  --item-color: #1a1a1a;
+  --item-hover-bg: rgba(0, 0, 0, 0.06);
+  --divider-color: rgba(0, 0, 0, 0.12);
 
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: fit-content;
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 10px 20px;
-  background: var(--nav-bg);
-  border-radius: 50px;
+  border-radius: 2rem;
+  background-color: var(--nav-glass);
+  border: 1px solid var(--nav-border);
   box-shadow: var(--nav-shadow);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  transform: translateX(-50%);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  z-index: 100;
-  overflow: hidden;
-}
-
-.nav::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(
-    var(--drop-size) circle at var(--x) var(--y),
-    var(--drop-color),
-    transparent 70%
-  );
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.nav:hover::before {
-  opacity: 1;
-  --drop-size: 250px;
 }
 
 .nav:hover {
-  transform: translateX(-50%) scale(1.04) translateY(-2px);
+  transform: translateX(-50%) translateY(-2px) scale(1.04);
   box-shadow: var(--nav-shadow-hover);
 }
 
+/* Clipping layer keeps the drop inside the pill while tooltips stay visible */
+.nav-drop-clip {
+  position: absolute;
+  inset: 0;
+  border-radius: 2rem;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nav-water-drop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, var(--drop-color), transparent 70%);
+  filter: blur(12px);
+  will-change: transform;
+}
+
 .nav-item {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,8 +55,8 @@
   height: 40px;
   border-radius: 50%;
   color: var(--item-color);
-  transition: transform 0.25s ease, background-color 0.25s ease;
   cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
 }
 
 .nav-item:hover {
@@ -68,26 +64,56 @@
   background-color: var(--item-hover-bg);
 }
 
-.nav-divider {
-  width: 1px;
-  height: 24px;
-  background: var(--divider-color);
-  margin: 0 4px;
+.nav-item::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(0, 90, 98, 0.9);
+  color: #dcdcdc;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
 }
 
-/* ─── Dark mode ─── */
+.nav-item:not([data-label])::after {
+  display: none;
+}
+
+.nav-item:hover::after {
+  opacity: 1;
+}
+
+.nav-divider {
+  position: relative;
+  z-index: 1;
+  width: 1px;
+  height: 24px;
+  margin: 0 4px;
+  width: 1px;
+  height: 24px;
+  margin: 0 4px;
+  background: var(--divider-color);
+}
+
 .dark .nav {
-  --drop-color: rgba(129, 140, 248, 0.15);
-  --nav-bg: #0d1b1b;
-  --nav-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  --nav-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --nav-glass: color-mix(in oklab, #152b2b 65%, transparent);
+  --nav-border: color-mix(in oklab, white 12%, transparent);
+  --nav-shadow: 0 26px 90px -50px rgb(0 0 0 / 0.7);
+  --nav-shadow-hover: 0 30px 90px -40px rgb(0 0 0 / 0.8);
+  --drop-color: rgba(129, 140, 248, 0.32);
   --item-color: #f5f5f5;
   --item-hover-bg: rgba(255, 255, 255, 0.08);
   --divider-color: rgba(255, 255, 255, 0.15);
 }
 
-.dark .nav-item:hover {
-  box-shadow:
-    inset 0 0 20px rgba(161, 156, 156, 0.5),
-    0 0 20px rgba(161, 156, 156, 0.4);
-}   
+.dark .nav-item::after {
+  background: rgba(165, 243, 252, 0.95);
+  color: #111827;
+}

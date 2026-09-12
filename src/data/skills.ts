@@ -1,0 +1,17 @@
+export const skills: string[] = [
+  'Python',
+  'PyTorch',
+  'TensorFlow',
+  'Java',
+  'TypeScript',
+  'React',
+  'Node.js',
+  'Spring Boot',
+  'PostgreSQL',
+  'MongoDB',
+  'Docker',
+  'Git',
+  'Figma',
+  'Android',
+  'Tailwind CSS',
+]

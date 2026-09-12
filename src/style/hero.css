@@ -1,0 +1,77 @@
+.hero-card {
+  --hero-card-bg: color-mix(in oklab, white 72%, transparent);
+  --hero-card-border: rgba(0, 0, 0, 0.06);
+  --hero-grid-line: rgba(0, 0, 0, 0.05);
+  --hero-grid-cell: 25px;
+  --frame-outer: rgba(214, 226, 218, 0.55);
+  --frame-inner: #ffffff;
+  --frame-glow: transparent;
+
+  position: relative;
+  overflow: hidden;
+  background-color: var(--hero-card-bg);
+  border: 1px solid var(--hero-card-border);
+  box-shadow: var(--shadow-hero-card);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Grid layer fades toward the card edges */
+.hero-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--hero-grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--hero-grid-line) 1px, transparent 1px);
+  background-size: var(--hero-grid-cell) var(--hero-grid-cell);
+  -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 35%, transparent 100%);
+  mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 35%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-portrait-frame {
+  position: relative;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--frame-outer);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.hero-portrait-frame::before {
+  content: '';
+  position: absolute;
+  inset: -30px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 55%, var(--frame-glow), transparent 70%);
+  filter: blur(16px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dark .hero-portrait-frame::before {
+  opacity: 1;
+}
+
+.hero-portrait-frame img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--frame-inner);
+  box-shadow: 0 15px 28px -14px rgba(0, 0, 0, 0.45);
+  background-color: transparent;
+}
+
+.dark .hero-card {
+  --hero-card-bg: color-mix(in oklab, #152b2b 55%, transparent);
+  --hero-card-border: rgba(255, 255, 255, 0.08);
+  --hero-grid-line: rgba(255, 255, 255, 0.04);
+  --frame-outer: rgba(78, 86, 81, 0.55);
+  --frame-inner: rgb(167, 167, 167);
+}

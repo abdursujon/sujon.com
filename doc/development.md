@@ -87,3 +87,69 @@ nav:
 5. Github: <GithubLogoIcon size={20} />
 6. Email: <EnvelopeIcon size={20} />
 8. <LinkedinLogoIcon size={20} />
+
+Container: 
+1. Enable the class-based dark variant
+In src/index.css, add after the import:
+@custom-variant dark (&:where(.dark, .dark *));
+Verify: toggle the nav moon icon — .dark styles in nav.css already work (they're plain CSS descendant selectors), so this step is only about unlocking dark: utilities for later. Nothing visibly changes yet.
+
+2. Declare the shared color tokens
+Still in index.css, add a @theme block with --color-bg-base, --color-bg-base-dark, --color-grid-line, --color-grid-line-dark. Blob colors stay out of @theme — they're hero/page-specific, not reusable tokens.
+
+1. Enable the class-based dark variant
+In src/index.css, add after the import:
+@custom-variant dark (&:where(.dark, .dark *));
+Verify: toggle the nav moon icon — .dark styles in nav.cssCSS descendant selectors), so this step is only aboutunlocking dark: utilities for later. Nothing visibly changes yet.
+
+2. Declare the shared color tokens
+Still in index.css, add a @theme block with --color-bg-baslor-grid-line, --color-grid-line-dark. Blob colors stay outof @theme — they're hero/page-specific, not reusable tokens.
+
+3. Fix the typo
+container.css:19 — delete the stray 9 after 80px 80px,. Verify: the 80px grid lines appear across the page for the first time.
+
+4. Move layout rules out of the class into Container.tsx
+Delete min-height, position, background-color, and transition from .container-bg. Add to the div: relative min-h-screen bg-bg-base
+dark:bg-bg-base-dark transition-colors duration-300. Verifep 3.
+
+5. Swap the local grid variable for the theme token
+In the two linear-gradients, replace var(--grid-color) with var(--color-grid-line), and drop --grid-color from both blocks. For dark mode the grid needs a different alpha, so keep one override: .dark .container-bg { --color-grid-line: var(--color-grid-line-dark); }.
+
+Trim the dark block
+.dark .container-bg should end up holding only --blob-1, --blob-2, and the grid-line override. The --bg-base line goes away — step 4 handles it via dark:bg-*.
+
+7. Check both themes
+npm run dev, toggle light/dark. Watch for: grid visible in both, blobs still positioned at 10%/20% and 90%/50%, background transition still smooth
+on toggle.
+
+
+Hero: 
+0. Fix first — src/style/container.css:19 has a stray 9 (80px 80px,9), which invalidates the whole background-size list. Item 2 won't look right until that's gone.
+
+6. Fonts (do this before the rest — everything else depends on the tokens)
+1. Add the two families to index.html via Google Fonts <link>: a display serif for the name, a geometric sans for body. Reference pairing looks like a high-contrast transitional serif + neutral geometric sans — candidates: Instrument Serif / Newsreader / EB Garamond for display, Inter / Jost for body.
+2. In index.css, declare reusable tokens inside @theme: --font-display, --font-body, plus size/tracking tokens for the name and the small caps labels. Tailwind v4 auto-generates font-display / font-body utilities from those names, so other sections reuse them for free.
+3. Set font-family: var(--font-body) on body as the default.
+
+1. Hero card container
+4. Rewrite Hero.tsx markup as Tailwind utilities: outer section centers the card with page padding; .hero-card becomes a grid grid-cols-[1fr_auto] items-center gap-* card with large radius (~`rounded-[28px]), near-white background, thin hairline border, generous padding. 5. Keep hero.css` only for what utilities can't express cleanly — the grid background and the image frame rings.
+
+2. Grid background inside the card
+6. In hero.css, give .hero-card two linear-gradient line layers at ~60px spacing in a very light grey, same technique as container-bg.
+7. Add a mask-image radial fade so the lines are faint at the card edges, matching the reference.
+8. Mirror the dark-mode variables under .dark .hero-card the way container.css does.
+
+3 + 4. Image frame and smaller image
+9. Wrap the img in a frame div: outer pale translucent ring, a white gap ring inside it, then the photo — concentric border + box-shadow rings, plus rounded-full and object-cover.
+10. Size the photo around 150–170px on desktop (down from whatever it renders now), shrinking at small breakpoints.
+plus rounded-full and object-cover.
+10. Size the photo around 150–170px on desktop (down from whatever it renders now), shrinking at small breakpoints.
+plus rounded-full and object-cover.
+10. Size the photo around 150–170px on desktop (down from whatever it renders now), shrinking at small breakpoints.
+
+5. Card shadow
+11. Layer two shadows on .hero-card: a tight low-opacity one for the edge and a wide soft one for the diffuse lift. Tailwind's shadow-* scale won't match the reference on its own — define a --shadow-hero-card token in @theme so it's reusable for the project/skill cards later.
+
+Responsive pass
+12. Collapse the two-column grid to a single centered column below md, image above text.
+

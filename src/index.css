@@ -1,1 +1,63 @@
-@import "tailwindcss"
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface: #faf9f7;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #6b6b6b;
+  --color-grid-line: rgba(0, 0, 0, 0.02);
+  --grid-cell: 64px;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --shadow-hero-card: 0 30px 80px -40px rgb(25 35 38 / 0.35);
+  --color-contribution-0: rgba(0, 0, 0, 0.05);
+  --color-contribution-1: #cfe8e6;
+  --color-contribution-2: #8fccc7;
+  --color-contribution-3: #4ba8a0;
+  --color-contribution-4: #06707e;
+  --color-accent: #06707e;
+}
+
+.dark {
+  --color-surface: #0d1b1b;
+  --color-ink: #f5f5f5;
+  --color-ink-muted: #9ca3af;
+  --color-grid-line: rgba(255, 255, 255, 0.025);
+   --color-contribution-0: rgba(255, 255, 255, 0.05);
+  --color-contribution-1: #0e3b3d;
+  --color-contribution-2: #14605f;
+  --color-contribution-3: #1d8a85;
+  --color-contribution-4: #3fc4b8;
+   --color-accent: #3fc4b8;
+}
+
+@layer base {
+  body {
+    min-height: 100vh;
+    color: var(--color-ink);
+    background-color: var(--color-surface);
+    background-image:
+      radial-gradient(ellipse 50% 40% at 10% 20%, var(--blob-1), transparent 60%),
+      radial-gradient(ellipse 70% 50% at 90% 50%, var(--blob-2), transparent 60%),
+      linear-gradient(to right, var(--color-grid-line) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--color-grid-line) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      100% 100%,
+      var(--grid-cell) var(--grid-cell),
+      var(--grid-cell) var(--grid-cell);
+    background-attachment: fixed, fixed, scroll, scroll;
+    transition: background-color 0.3s ease;
+  }
+}
+
+:root {
+  --blob-1: rgba(115, 255, 248, 0.28);
+  --blob-2: rgba(253, 230, 211, 0.55);
+}
+
+.dark {
+  --blob-1: rgba(80, 180, 220, 0.12);
+  --blob-2: rgba(247, 214, 199, 0.06);
+}
