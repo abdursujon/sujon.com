@@ -3,19 +3,18 @@
 React, TypeScript, Tailwind, Vite, GitHub GraphQL API
 
 # Project List 
-Before Starting To Apply 
-- Group Project
-- Petwatch 
-- Final Year Project 
-- Java Data Analysis App with Junit 
-- Python Data Visualisation Project with pytest*
-- Zorth The Solar Alien Game
-- Learn Python With Practical Example
+1. Python Data Visualisation Project with pytest*
+2. Group Project
+3. Petwatch 
+4. Zorp the solar alien 
+5. Data analysis Project 
 
-Project in third year 
+# Project in third year 
+- Final year project 
 - Deep learning project
 - Andriod App
 - iOS App 
+
 # Node.js 
 Is a runtime environment to run JS outside the browser which excutes .js files without browser. 
 Example: script.js can be run in our computer if we have node.js 
