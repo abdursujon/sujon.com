@@ -3,7 +3,8 @@
 React, TypeScript, Tailwind, Vite, GitHub GraphQL API
 
 # Project List 
-1. Python Data Visualisation Project with pytest*
+1. Job Application Autofill Bot*
+Build a browser automation script with Playwright that helps fill out job application forms using your resume data. This project introduces browser automation, form handling, file uploads, and working with structured personal data.
 2. Group Project
 3. Petwatch 
 4. Zorp the solar alien 
@@ -14,6 +15,13 @@ React, TypeScript, Tailwind, Vite, GitHub GraphQL API
 - Deep learning project
 - Andriod App
 - iOS App 
+
+
+# Automation Brainstorm 
+1. Boilerplate for email 
+2. When I start ubuntu, vscode, brave, pdf reader and spotify will load auto, When I start ubuntu, the clock wills start with a 3 hour timer  When I start ubuntu, one drive will load on the screen with the final year folder open 
+3. My resume details will be auto complete on my job applications 
+4. on every commit my final year project, deep learning project and mobile dev project will sync in one drive as well as github, even though i work on local files from pc 
 
 # Node.js 
 Is a runtime environment to run JS outside the browser which excutes .js files without browser. 
