@@ -13,12 +13,13 @@ import { useTheme } from '../../hooks/useTheme'
 import { useRef, useState, useEffect, useCallback } from 'react'
 import { sectionLinks } from '../../data/sectionLinks'
 
-const WATER_DROP_EASING_FACTOR = 0.08
-const WATER_DROP_STRETCH_PER_PIXEL = 0.012
+
+const WATER_DROP_EASING_FACTOR = 0.07
+const WATER_DROP_STRETCH_PER_PIXEL = 0.02
 const WATER_DROP_MAX_STRETCH = 0.45
 
 export function Navbar() {
-  const { theme, toggle } = useTheme()
+  const { theme, toggleTheme } = useTheme()
   const navElementRef = useRef<HTMLElement>(null)
   const waterDropElementRef = useRef<HTMLDivElement>(null)
   const waterDropTargetRef = useRef({ x: 0, y: 0 })
@@ -128,7 +129,7 @@ export function Navbar() {
       <a href="#projects" className="nav-item" data-label="Projects"><FolderOpenIcon size={20} /></a>
       <div className="nav-divider" />
 
-      <button onClick={toggle} className="nav-item" aria-label="Toggle theme">
+      <button onClick={toggleTheme} className="nav-item" aria-label="Toggle theme">
         {theme === 'dark' ? <SunDimIcon size={20} /> : <MoonStarsIcon size={20} />}
       </button>
 

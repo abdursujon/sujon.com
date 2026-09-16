@@ -22,6 +22,8 @@ Build a browser automation script with Playwright that helps fill out job applic
 2. When I start ubuntu, vscode, brave, pdf reader and spotify will load auto, When I start ubuntu, the clock wills start with a 3 hour timer  When I start ubuntu, one drive will load on the screen with the final year folder open 
 3. My resume details will be auto complete on my job applications 
 4. on every commit my final year project, deep learning project and mobile dev project will sync in one drive as well as github, even though i work on local files from pc 
+5. Fix grammer and my spelling mistakes as i type system wise, in any application once i hit full stop, it will apply british style spell and grammer instantly. 
+
 
 # Node.js 
 Is a runtime environment to run JS outside the browser which excutes .js files without browser. 
@@ -161,3 +163,28 @@ Responsive pass
 12. Collapse the two-column grid to a single centered column below md, image above text.
 
 
+# What is .oxlintrc.json is and what is linting 
+Linter: A linter is a tool that automatically reads your code and flags problems without running it. The name comes from an old Unix program called "lint" that picked out lint-like flaws in C code.
+
+.oxlintrc.json is the configuration file for Oxlint, a fast Rust-based JavaScript/TypeScript linter from the Oxc project. It plays the same role as .eslintrc.json or eslint.config.js in an ESLint setup. It tells Oxlint which rules to run, how strictly to enforce them, and which files to skip. It has nothing to do with React itself; React projects use it for linting JSX, hooks, and accessibility.
+
+# What is package-lock.json 
+project, including all the sub-dependencies your dependencies pull in. It's created automatically by npm when you run npm install, and it lives in your project root next to package.json.
+
+# What is package.json 
+package.json — what we want. Loose ranges (^18.2.0), plus our scripts and metadata. We edit it by hand.
+package-lock.json — what we got. The exact versions of every package, including deep sub-dependencies we never named. npm writes it.
+
+Why "lock": package.json is deliberately flexible, so ^18.2.0 could resolve to different versions over time. The lock file freezes it to one answer, so every install is identical across our machines.
+
+Why not just pin exact versions in package.json? Because it only lists our direct deps — the lock file pins the whole tree, and keeping ranges lets us update easily when we want.
+
+# tsconfig files: 
+This split comes from Vite's React + TypeScript template. You actually have three files, and the reason is that your project runs TypeScript in two different environments that need different settings.
+
+tsconfig.json — the root. It barely contains any real settings; it just points to the other two via references. It's the entry file that ties the setup together.
+tsconfig.app.json — settings for your app code (everything in src/). This is the browser environment: it uses DOM types, JSX, and bundler-style module resolution.
+tsconfig.node.json — settings for your build/config files that run in Node, mainly vite.config.ts. Node doesn't have DOM or JSX; it's a different runtime, so it needs its own config.
+
+# vite.config.ts
+vite.config.ts is the configuration file for Vite, the build tool and dev server that runs your React app. It controls how your code gets served during development and bundled for production.

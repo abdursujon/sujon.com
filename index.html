@@ -10,6 +10,15 @@
     <title>sujon.com</title>
   </head>
   <body>
+    <script>
+      (function applyStoredOrSystemThemeBeforePaint() {
+        var storedTheme = localStorage.getItem('theme')
+        var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (storedTheme === 'dark' || (storedTheme === null && prefersDark)) {
+          document.documentElement.classList.add('dark')
+        }
+      })()
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

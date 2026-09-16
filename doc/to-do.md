@@ -1,7 +1,19 @@
-# Hero
-1. Hero container with grid using tailwind card
-2. Custom grid background for hero card like the portfolio png example
-3. Custom frame around the image 
-4. smaller image 
-5. shadow around the card just like the portfolio image  
-6. font style same as the portfoli image set up so that we can reuse font for other things 
+1. Fix all other section except cv and projects and learn everything on the code do not skip anything understand everything
+2. Fix CV
+   a) One for AI 
+   b) One for Fullstack 
+   c) One for mobile development 
+3. Projects
+   1. Group Projects 
+   2. Petwatch 
+   3. Data Analysis API 
+   4. Zorp the solar alien 
+   5. Final Year Project 
+   6. Learn Patterns 
+   
+   Add later 
+   6. Deep learning project 
+   7. Andriod project
+   8. iOS project 
+4. Start applying jobs 
+5. Leetcode patterns at least 1 a day 

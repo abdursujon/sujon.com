@@ -28,7 +28,7 @@ export function Footer() {
             {footerLinkGroups.map(({ heading, links }) => (
               <nav
                 key={heading}
-                className="rounded-3xl border border-ink/5 bg-white/40 p-6 md:p-8 dark:bg-white/5"
+                className="grid-card rounded-3xl border border-ink/5 bg-white/40 p-6 md:p-8 dark:bg-white/5"
               >
                 <h2 className="font-display text-sm uppercase tracking-[0.2em] text-ink">
                   {heading}
@@ -50,7 +50,7 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="mt-6 rounded-3xl border border-ink/5 bg-white/40 p-6 md:p-8 dark:bg-white/5">
+          <div className="grid-card mt-6 rounded-3xl border border-ink/5 bg-white/40 p-6 md:p-8 dark:bg-white/5">
             <h2 className="font-display text-sm uppercase tracking-[0.2em] text-ink">Connect</h2>
             <ul className="mt-6 flex flex-wrap gap-3">
               {socialLinks.map(({ label, href, IconComponent }) => (
