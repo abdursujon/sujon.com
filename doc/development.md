@@ -188,3 +188,6 @@ tsconfig.node.json — settings for your build/config files that run in Node, ma
 
 # vite.config.ts
 vite.config.ts is the configuration file for Vite, the build tool and dev server that runs your React app. It controls how your code gets served during development and bundled for production.
+
+install netlify module 
+npm i -D @netlify/functions

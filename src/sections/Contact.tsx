@@ -28,9 +28,9 @@ export function Contact() {
             <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0f7d8c] dark:text-accent">
               Via Email
             </span>
-            <span className="mt-4 text-2xl font-semibold text-ink">Ask questions</span>
+            <span className="mt-4 text-2xl font-semibold text-ink">Reach out</span>
             <span className="mt-3 text-base text-ink-muted">
-              Explore collaboration opportunities
+              Interested in my work? Please send me email.
             </span>
           </a>
 
@@ -45,7 +45,7 @@ export function Contact() {
             </span>
             <span className="mt-4 text-2xl font-semibold text-ink">Message me directly</span>
             <span className="mt-3 text-base text-ink-muted">
-              Visit my profile and start a conversation
+              You can also message me in Linkedin
             </span>
           </a>
         </div>

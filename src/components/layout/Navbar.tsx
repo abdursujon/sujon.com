@@ -35,7 +35,7 @@ export function Navbar() {
     const halfDropHeight = waterDropElement.offsetHeight / 2
 
     const restingPosition = {
-      x: navElement.offsetWidth / 2,
+      x: navElement.offsetWidth,
       y: navElement.offsetHeight / 2,
     }
     waterDropTargetRef.current = { ...restingPosition }
@@ -108,7 +108,7 @@ export function Navbar() {
     const navElement = navElementRef.current
     if (!navElement) return
     waterDropTargetRef.current = {
-      x: navElement.offsetWidth / 2,
+      x: navElement.offsetWidth,
       y: navElement.offsetHeight / 2,
     }
   }, [])
@@ -125,7 +125,7 @@ export function Navbar() {
       </div>
 
       <a href="#hero" className="nav-item" data-label="Home"><HouseLineIcon size={20} /></a>
-      <a href="#about" className="nav-item" data-label="CV"><UserCircleIcon size={20} /></a>
+      <a href="/abdur_rahim_sujon_web_cv.pdf" target="_blank" className="nav-item" data-label="CV"><UserCircleIcon size={20} /></a>
       <a href="#projects" className="nav-item" data-label="Projects"><FolderOpenIcon size={20} /></a>
       <div className="nav-divider" />
 
@@ -147,7 +147,7 @@ export function Navbar() {
       {isSectionMenuOpen && (
         <ul
           role="menu"
-          className="absolute top-full right-0 z-20 mt-3 flex w-56 flex-col rounded-3xl border border-white/50 bg-white/75 p-2 shadow-[0_26px_90px_-50px_rgb(25_35_38/0.42)] backdrop-blur-xl dark:border-white/10 dark:bg-[#152b2b]/80"
+          className="absolute top-full right-0 z-20 mt-3 flex w-56 flex-col rounded-3xl border border-white/50 bg-white p-2 shadow-[0_26px_90px_-50px_rgb(25_35_38/0.42)] backdrop-blur-xl dark:border-white/10 dark:bg-[#152b2b]"
         >
           {sectionLinks.map(({ label, href }) => (
             <li key={href} role="none">

@@ -11,9 +11,9 @@ export interface SocialLink {
   IconComponent: Icon
 }
 
-const GITHUB_URL = 'https://github.com/your-handle'
-const LINKEDIN_URL = 'https://linkedin.com/in/your-handle'
-const EMAIL_ADDRESS = 'you@example.com'
+const GITHUB_URL = 'https://github.com/abdursujon'
+const LINKEDIN_URL = 'https://www.linkedin.com/in/abdursujon/'
+const EMAIL_ADDRESS = 'abdursujon@hotmail.com'
 
 export const socialLinks: SocialLink[] = [
   { label: 'GitHub', href: GITHUB_URL, IconComponent: GithubLogoIcon },
