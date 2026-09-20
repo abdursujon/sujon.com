@@ -19,8 +19,8 @@ export const footerLinkGroups: FooterLinkGroup[] = [
   {
     heading: 'Resources',
     links: [
-      { label: 'Download CV', href: '/cv.pdf', isExternal: true },
-      { label: 'Source Code', href: 'https://github.com/your-handle/sujon.com', isExternal: true },
+      { label: 'Download CV', href: '/abdur_rahim_sujon_web_cv.pdf', isExternal: true },
+      { label: 'Source Code', href: 'https://github.com/abdursujon/sujon.com', isExternal: true },
       { label: 'Values', href: '#values' },
       { label: 'Contact', href: '#contact' },
     ],

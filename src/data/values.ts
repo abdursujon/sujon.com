@@ -10,33 +10,27 @@ export const values: ValueEntry[] = [
   {
     slug: 'principles',
     label: 'Principles',
-    text: 'Build it simple, then make it correct. Readable code outlives clever code.',
+    text: 'Pursue interest, start simple, and be consistent.',
   },
   {
     slug: 'belief',
     label: 'Belief',
-    text: 'Curiosity, consistency and shipping beat raw talent.',
+    text: 'AMC: Accept what I cannot control > Master what I can > Consistency.',
   },
   {
     slug: 'ethos',
     label: 'Ethos',
-    text: 'Learn by building, teach by explaining.',
+    text: 'Start by thinking, learn by building, influence by helping.',
   },
   {
     slug: 'goal',
     label: 'Goal',
-    text: 'Build software that people actually reach for twice.',
+    text: 'Research new ideas to come up with better solutions for future generations.',
   },
   {
     slug: 'dream-about',
     label: 'Dream About',
-    text: 'Models small enough to run on the phone in your pocket, doing work that today needs a data centre.',
+    text: 'No physical work required to generate income, complete automation that enables humanity to dedicate their lives to the pursuit of knowledge, education, sports, and innovation.',
     isEmphasised: true,
-  },
-  {
-    slug: 'mbti',
-    label: 'MBTI',
-    text: 'INTJ',
-    isHidden: true,
-  },
+  }
 ]

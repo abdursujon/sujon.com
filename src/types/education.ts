@@ -5,4 +5,5 @@ export interface EducationEntry {
   period: string
   logoUrl?: string
   href?: string
+  academicResults?:string[]
 }

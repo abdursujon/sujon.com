@@ -10,7 +10,5 @@ export const sectionLinks: SectionLink[] = [
   { label: 'Contact', href: '#contact' },
   { label: 'Skills', href: '#skills' },
   { label: 'Education', href: '#education' },
-  { label: 'Digital Art', href: '#digital-art' },
-  { label: 'Drawings', href: '#drawings' },
   { label: 'Interests', href: '#interests' },
 ]

@@ -8,10 +8,9 @@ import { Skills } from './sections/Skills'
 import { Education } from './sections/Education'
 import { Experience } from './sections/Experience'
 import { Contact } from './sections/Contact'
-import { DigitalArt } from './sections/DigitalArt'
-import { Drawings } from './sections/Drawings'
 import { Interests } from './sections/Interests'
 import { Values } from './sections/Values'
+import { LegalDialog } from './components/ui/LegalDialog'
 import { Footer } from './components/layout/Footer'
 
 function App() {
@@ -27,11 +26,10 @@ function App() {
       <Skills/>
       <Education/>
       <Contact/>
-      <DigitalArt/>
-      <Drawings/>
       <Interests/>
       <Values/>
       <Footer/>
+      <LegalDialog/>
     </>
   )
 }

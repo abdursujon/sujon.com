@@ -8,7 +8,7 @@ export function Education() {
       <SectionLabel>Education</SectionLabel>
 
       <ul className="mt-6 flex flex-col gap-4">
-        {educationEntries.map(({ slug, institution, qualification, period, logoUrl, href }) => (
+        {educationEntries.map(({ slug, institution, qualification, period, logoUrl, href, academicResults }) => (
           <li
             key={slug}
             className="flex flex-wrap items-center gap-x-6 gap-y-3 rounded-[40px] border border-transparent bg-white/70 px-6 py-6 shadow-[0_20px_50px_-35px_rgba(25,35,38,0.4)] transition-colors hover:border-accent/40 md:px-8 dark:bg-white/5"
@@ -42,6 +42,19 @@ export function Education() {
               <p className="mt-1 text-sm uppercase tracking-[0.12em] text-ink-muted">
                 {qualification}
               </p>
+              {academicResults && academicResults.length > 0 && (
+                <ul className="mt-3 flex flex-wrap gap-2">
+                  {academicResults.map((academicResult) => (
+                    <li
+                      key={academicResult}
+                      className="rounded-full bg-ink/5 px-3 py-1 text-xs uppercase tracking-[0.12em] text-ink-muted dark:bg-white/10"
+                    >
+                      {academicResult}
+                    </li>
+                  ))}
+                </ul>
+              )}
+              
             </div>
 
             <span className="order-last w-full text-sm uppercase tracking-[0.18em] text-ink-muted md:order-none md:w-auto md:shrink-0 md:text-right">

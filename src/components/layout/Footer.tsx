@@ -3,9 +3,9 @@ import { GithubLogoIcon } from '@phosphor-icons/react'
 import { socialLinks } from '../../data/socialLinks'
 import { footerLinkGroups } from '../../data/footerLinks'
 
-const LAST_UPDATED_LABEL = '2026.09'
-const SOURCE_REPOSITORY_LABEL = 'your-handle/sujon.com'
-const SOURCE_REPOSITORY_URL = 'https://github.com/your-handle/sujon.com'
+const LAST_UPDATED_LABEL = 'Sept-2026'
+const SOURCE_REPOSITORY_LABEL = 'abdursujon/sujon.com'
+const SOURCE_REPOSITORY_URL = 'https://github.com/abdursujon/sujon.com'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -79,11 +79,11 @@ export function Footer() {
 
             <div className="flex flex-col gap-1 md:items-end">
               <p>
-                <a href="#values" className="transition-colors hover:text-accent">
+                <a href="#privacy" className="transition-colors hover:text-accent">
                   Privacy Policy
                 </a>
                 <span className="mx-2">·</span>
-                <a href="#values" className="transition-colors hover:text-accent">
+                <a href="#terms" className="transition-colors hover:text-accent">
                   Terms &amp; Disclaimer
                 </a>
               </p>

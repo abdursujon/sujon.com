@@ -191,3 +191,6 @@ vite.config.ts is the configuration file for Vite, the build tool and dev server
 
 install netlify module 
 npm i -D @netlify/functions
+
+# run netlify 
+npx 

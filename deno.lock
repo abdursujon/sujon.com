@@ -11,6 +11,7 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@netlify/functions@6",
         "npm:@phosphor-icons/react@^2.1.10",
         "npm:@tailwindcss/vite@^4.3.3",
         "npm:@types/node@^24.13.3",
