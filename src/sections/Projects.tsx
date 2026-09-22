@@ -6,7 +6,7 @@ import { Button } from '../components/ui/Button'
 import { ProjectCard } from '../components/ui/ProjectCard'
 import { projects } from '../data/projectData'
 
-const INITIALLY_VISIBLE_PROJECT_COUNT = 3
+const INITIALLY_VISIBLE_PROJECT_COUNT = 4
 
 export function Projects() {
   const [areAllProjectsVisible, setAreAllProjectsVisible] = useState(false)
@@ -26,7 +26,7 @@ export function Projects() {
         </h2>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-12 grid gap-6 md:grid-cols-2">
         {visibleProjects.map((project) => (
           <ProjectCard key={project.slug} {...project} />
         ))}
