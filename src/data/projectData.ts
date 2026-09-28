@@ -35,7 +35,7 @@ export const projects: Project[] = [
     slug: 'project-three',
     imageUrl: '/projects/project4.png',
     title: 'PetWatch: Community Lost-Pet Tracker',
-    period: 'Sept 2026 - Present',
+    period: 'Dec 2025 - Present',
     tools: ["PHP", "MariaDB", "JavaScript (ES6)", "AJAX", "Leaflet", "OpenStreetMap", "Nominatim API", "Bootstrap 5", "MVC"],
     description: 'A community lost-pet tracker I built in plain PHP using an MVC architecture, with no frameworks or build step. Owners post their lost pets with photos and details, and other users report sightings by clicking the map or using their device\'s GPS. Every sighting is plotted on an interactive Leaflet map with marker clustering, and coordinates are turned into street addresses through a disk-cached Nominatim geocoder to stay within rate limits. It also includes debounced live search with ranked suggestions, infinite scroll, filtering and sorting, and session-based authentication with login rate limiting, role-based navigation and token-checked AJAX endpoints.',
     links: [
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     slug: 'project-four',
     imageUrl: '/projects/project5.png',
     title: 'Zorp The Solar Alien',
-    period: 'Sept 2026 - Present',
+    period: 'Mar 2026 - Present',
     tools: ["Java", "JavaFX", "Maven", "GitHub Actions", "MVC", "Factory Pattern", "Singleton Pattern"],
     description: 'A 2D educational game built in Java and JavaFX to teach primary school children about the Solar System. Players control Zorp, a stranded alien fighting to gather information about solar system and visit Sun to Neptune across 9 levels of 10 waves each, battling enemies and a unique boss on every planet while collecting fact cards to unlock the next world. The code is structured with MVC, Factory and Singleton patterns, runs on a fixed 60 updates-per-second game loop, and saves progress automatically. A GitHub Actions pipeline packages it with a bundled Java runtime for Windows, macOS and Linux on every tagged release.',
     links: [
@@ -73,16 +73,25 @@ export const projects: Project[] = [
   },
   {
     slug: 'project-six',
-    imageUrl: '/projects/project.png',
-    title: 'Problem Solving Patters',
-    period: 'Sept 2026 - Present',
-    tools:["Python"],
-    description: '',
+    imageUrl: '/projects/project6.png',
+    title: 'Problem Solving Patterns',
+    period: 'Aug 2026 - Present',
+    tools: ["Python", "Data Structures", "Algorithms", "LeetCode"],
+    description: 'A growing collection of the problem-solving patterns behind most coding interview questions, written in Python. Each pattern comes with an explanation of when to use it, its pros and cons and the problems it typically solves, alongside a working implementation and solved LeetCode problems. The aim is to recognise which approach a question needs just by reading it. So far 8 of 23 planned patterns are complete, including two pointers, sliding window, fast and slow pointers, modified binary search and tree depth-first search.',
     links: [
-      { label: 'Github', href: 'https://github.com/Salford-Hack-Camp-G39/BCS-Student-Placement-Application.git', IconComponent: GithubLogoIcon },
-      {
-        label: 'View Demo', href: 'https://youtube.com'
-      },
+      { label: 'Github', href: 'https://github.com/abdursujon/problem-solving-patterns.git', IconComponent: GithubLogoIcon },
     ],
-  }
+  },
+  {
+    slug: 'project-seven',
+    imageUrl: '/projects/project7.png',
+    title: 'Get Template for This Website',
+    period: 'Sept 2026 - Present',
+    tools: ["React", "TypeScript", "Vite", "Tailwind CSS", "Netlify", "GitHub GraphQL API", "Phosphor Icons", "oxlint"],
+    description: 'The open-source template behind this portfolio, built from scratch with React 19, TypeScript and Tailwind CSS. Every section reads from a typed data file, so adding a project, job or artwork means editing one array rather than the markup. A Netlify Function queries the GitHub GraphQL API to render a live two-year contribution calendar, and the site supports light and dark mode with a system-preference fallback. It also includes drawing and digital-art galleries, terms and privacy dialogs, a reusable UI component kit and a mobile-first responsive layout, deployed on Netlify with continuous deployment.',
+    links: [
+      { label: 'Github', href: 'https://github.com/abdursujon/sujon.com.git', IconComponent: GithubLogoIcon },
+      { label: 'Launch', href: 'https://sujons.com' },
+    ],
+  },
 ]

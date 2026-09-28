@@ -73,22 +73,6 @@ Use `netlify dev` when working on the contribution graph; the serverless functio
 | `npm run preview` | Serve the production build locally |
 | `npm run lint` | Lint the codebase with oxlint |
 
-## Project Structure
-
-```
-src/
-├── assets/        Images and static media
-├── components/
-│   ├── layout/    Navbar and Footer
-│   └── ui/        Reusable presentational components
-├── data/          Typed content for every section
-├── hooks/         Custom hooks (theme handling)
-├── sections/      One component per page section
-├── style/         Scoped CSS for nav, hero, and cards
-└── types/         Shared TypeScript definitions
-netlify/
-└── functions/     Serverless GitHub contributions endpoint
-```
 
 ## Customising the Content
 
