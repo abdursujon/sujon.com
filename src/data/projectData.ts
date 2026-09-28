@@ -5,26 +5,61 @@ import { contactDestinations } from './socialLinks'
 export const projects: Project[] = [
   {
     slug: 'project-one',
-    imageUrl: '/projects/project1.png',
-    title: 'Final Year Project',
+    imageUrl: '/projects/project1.jpg',
+    title: 'Embedded AI-Based Smart Kitchen Inventory Tracking System Using Raspberry Pi, Battery-Powered ESP32-CAM, Reed Switch Door Detection, LED, INT8 Quantised CLIP and OpenCV',
     period: 'Sept 2026 - Present',
-    tools:["Python", "Pytorch", "etc"],
-    description: 'Description to be edited',
+    tools: ["Python", "PyTorch", "OpenCLIP", "ONNX Runtime", "OpenCV", "C++ (Arduino)", "ESP32-CAM", "Raspberry Pi", "Flask", "SQLite", "Telegram Bot API"],
+    description: 'A final year research project where I\'m building a low-cost embedded kitchen stock tracker. An ESP32-CAM inside the cupboard wakes when the door is closed, photographs the shelf and sends it to a Raspberry Pi, which identifies each jar with an open-set CLIP model, estimates fill level with OpenCV and sends low-stock alerts via Telegram. The research looks at how far CLIP can be compressed (ONNX, INT8) to run on low-power hardware while still telling apart near-identical items like sugar, salt and flour.',
     links: [
-      { label: 'Private Research Repository', href: '', IconComponent: GithubLogoIcon },
-      { label: 'View Project Proposal', href: '/abdur_rahim_sujon_web_cv.pdf'},
+      { label: 'Private: Code available on request', href: '', IconComponent: GithubLogoIcon },
+      { label: 'View Project Proposal', href: './yes'},
       {
         label: 'Contact me for discussion',
         href: `mailto:${contactDestinations.emailAddress}?subject=Final Year Project code`,
         IconComponent: EnvelopeSimpleIcon,
       },
     ],
-  }, 
+  },
   {
     slug: 'project-two',
+    imageUrl: '/projects/project3.png',
+    title: 'Analytics Engine',
+    period: 'Dec 2025 - Present',
+    tools: ["Java", "Spring Boot", "JPA", "H2", "Gradle", "JUnit 5", "MockMvc", "Swagger/OpenAPI", "Docker", "AWS EC2", "React", "TypeScript"],
+    description: 'A data-profiling REST API built with Spring Boot, designed as a building block that could sit inside a larger data pipeline. Upload a CSV or Parquet file and it infers column types, counts nulls and unique values, and calculates min, max, mean, median, standard deviation and percentiles from p25 to p99. Each analysis is stored so it can be retrieved, downloaded as JSON or deleted through the API, and repeat uploads are detected with SHA-256 content hashing and served straight from cache. The API is documented with Swagger/OpenAPI, monitored with Spring Actuator, covered by unit and integration tests, and deployed on AWS EC2 with a React and TypeScript web UI on top.',links: [
+      { label: 'Github', href: 'https://github.com/abdursujon/analytics-engine.git', IconComponent: GithubLogoIcon },
+      { label: 'Launch', href: 'https://abdursujon.github.io/analytics-engine-ui/' },
+    ],
+  },
+  {
+    slug: 'project-three',
+    imageUrl: '/projects/project4.png',
+    title: 'PetWatch: Community Lost-Pet Tracker',
+    period: 'Sept 2026 - Present',
+    tools: ["PHP", "MariaDB", "JavaScript (ES6)", "AJAX", "Leaflet", "OpenStreetMap", "Nominatim API", "Bootstrap 5", "MVC"],
+    description: 'A community lost-pet tracker I built in plain PHP using an MVC architecture, with no frameworks or build step. Owners post their lost pets with photos and details, and other users report sightings by clicking the map or using their device\'s GPS. Every sighting is plotted on an interactive Leaflet map with marker clustering, and coordinates are turned into street addresses through a disk-cached Nominatim geocoder to stay within rate limits. It also includes debounced live search with ranked suggestions, infinite scroll, filtering and sorting, and session-based authentication with login rate limiting, role-based navigation and token-checked AJAX endpoints.',
+    links: [
+      { label: 'Github', href: 'https://github.com/abdursujon/petwatch.git', IconComponent: GithubLogoIcon },
+      { label: 'Launch', href: 'https://sickly-impostors.poseidon.salford.ac.uk/clientserver/index.php' },
+    ],
+  },
+  {
+    slug: 'project-four',
+    imageUrl: '/projects/project5.png',
+    title: 'Zorp The Solar Alien',
+    period: 'Sept 2026 - Present',
+    tools: ["Java", "JavaFX", "Maven", "GitHub Actions", "MVC", "Factory Pattern", "Singleton Pattern"],
+    description: 'A 2D educational game built in Java and JavaFX to teach primary school children about the Solar System. Players control Zorp, a stranded alien fighting to gather information about solar system and visit Sun to Neptune across 9 levels of 10 waves each, battling enemies and a unique boss on every planet while collecting fact cards to unlock the next world. The code is structured with MVC, Factory and Singleton patterns, runs on a fixed 60 updates-per-second game loop, and saves progress automatically. A GitHub Actions pipeline packages it with a bundled Java runtime for Windows, macOS and Linux on every tagged release.',
+    links: [
+      { label: 'Github', href: 'https://github.com/abdursujon/zorp-the-solar-alien.git', IconComponent: GithubLogoIcon },
+      { label: 'Get The Game', href: 'https://github.com/abdursujon/zorp-the-solar-alien/releases/latest' },
+    ],
+  },
+  {
+    slug: 'project-five',
     imageUrl: '/projects/project2.png',
-    title: 'Find A Placement',
-    period: 'University of Salford HackCamp, Dec 2026 - Jan 2026',
+    title: 'Find A Placement (for BCS Manchester), University of Salford HackCamp',
+    period: 'Dec 2026 - Jan 2026',
     tools:["JavaScript", "PHP", "SQLite", "MVC", "SCRUM"],
     description: 'Placement platform built for BCS Manchester to boost undergraduate placement uptake by matching students with employers offering year-long industrial placements. Serves students, employers, career staff, and admins. Responsive PHP app with SQLite backend, Bootstrap UI, and JavaScript, with matching logic aligned to SFIA v8.',
     links: [
@@ -35,65 +70,9 @@ export const projects: Project[] = [
         IconComponent: EnvelopeSimpleIcon,
       },
     ],
-  }, 
-  {
-    slug: 'project-four',
-    imageUrl: '/projects/project3.png',
-    title: 'Analytics Engine',
-    period: 'Dec 2026 - Present',
-    tools:["Java", "JUnit", "MockMVC", "Spring Boot", "AWS", "Docker", "React", "TypeScript"],
-    description: 'Spring Boot REST API that profiles CSV and Parquet data. Infers column types, counts nulls and unique values, computes summary statistics, and persists results for later retrieval or download. SHA-256 hashing detects repeat uploads and returns the cached analysis.',
-    links: [
-      { label: 'Github', href: 'https://github.com/abdursujon/analytics-engine.git', IconComponent: GithubLogoIcon },
-      {
-        label: 'Launch', href: 'https://abdursujon.github.io/analytics-engine-ui/'
-      },
-    ],
   },
   {
-    slug: 'project-three',
-    imageUrl: '/projects/project4.png',
-    title: 'PetWatch',
-    period: 'Sept 2026 - Present',
-    tools:["JavaScript", "PHP", "MariaDB", "MVC"],
-    description: 'A community-driven web application that helps pet owners find their lost pets through crowd-sourced sighting reports and an interactive map.',
-    links: [
-      { label: 'Github', href: 'https://github.com/abdursujon/petwatch.git', IconComponent: GithubLogoIcon },
-      {
-        label: 'Launch', href: 'https://sickly-impostors.poseidon.salford.ac.uk/clientserver/index.php'
-      },
-    ],
-  }, 
-   
-  {
-    slug: 'project-five',
-    imageUrl: '/projects/project5.png',
-    title: 'Zorp The Solar Alien',
-    period: 'Sept 2026 - Present',
-    tools:["Java", "JavaFX", "Design Patterns"],
-    description: 'Web-based placement matching system developed for BCS Manchester to increase undergraduate placement uptake by matching university students with employers offering year-long industrial placements.',
-    links: [
-      { label: 'Github', href: 'https://github.com/Salford-Hack-Camp-G39/BCS-Student-Placement-Application.git', IconComponent: GithubLogoIcon },
-      {
-        label: 'View Demo', href: 'https://youtube.com'
-      },
-    ],
-  }, {
-    slug: 'project-seven',
-    imageUrl: '/projects/project.png',
-    title: 'Mirror Metrics',
-    period: 'Sept 2026 - Present',
-    tools:["Python", "Matplotlib", "Pyplot", "Pandas"],
-    description: '',
-    links: [
-      { label: 'Github', href: 'https://github.com/Salford-Hack-Camp-G39/BCS-Student-Placement-Application.git', IconComponent: GithubLogoIcon },
-      {
-        label: 'View Demo', href: 'https://youtube.com'
-      },
-    ],
-  }, 
-  {
-    slug: 'project-seven',
+    slug: 'project-six',
     imageUrl: '/projects/project.png',
     title: 'Problem Solving Patters',
     period: 'Sept 2026 - Present',
