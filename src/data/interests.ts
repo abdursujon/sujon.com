@@ -19,8 +19,8 @@ export const interests: Interest[] = [
     slug: 'football',
     name: 'Football',
     IconComponent: SoccerBallIcon,
-    actionLabel: 'Lets play a game together. Find me on FootyAddicts — search name "sujon"',
-    href: 'https://footyaddicts.com/account/search-players',
+    actionLabel: 'Lets play a game together. Add me on Footy Addicts"',
+    href: 'https://footyaddicts.com/players/sujon',
   },
   {
     slug: 'hiking',

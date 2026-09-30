@@ -26,7 +26,7 @@ export function Projects() {
         </h2>
       </div>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2">
+      <div className="mt-12 grid gap-x-10 gap-y-12 md:grid-cols-2">
         {visibleProjects.map((project) => (
           <ProjectCard key={project.slug} {...project} />
         ))}

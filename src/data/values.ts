@@ -25,12 +25,12 @@ export const values: ValueEntry[] = [
   {
     slug: 'goal',
     label: 'Goal',
-    text: 'Research new ideas to come up with better solutions for future generations.',
+    text: 'Reach a point where I work only to pursue my passion, not because I need more money.',
   },
   {
     slug: 'dream-about',
     label: 'Dream About',
-    text: 'No physical work required to generate income, complete automation that enables humanity to dedicate their lives to the pursuit of knowledge, education, sports, and innovation.',
+    text: 'No physical work is required to generate income; complete automation enables humanity to dedicate their lives to the pursuit of knowledge, education, sports, and innovation.',
     isEmphasised: true,
   }
 ]

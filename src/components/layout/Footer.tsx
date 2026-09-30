@@ -11,7 +11,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="mx-auto w-full max-w-6xl px-6 pb-16">
+    <footer className="mx-auto w-full max-w-6xl px-6 py-20">
       <div className="grid-card rounded-[40px] px-6 py-10 md:px-14 md:py-12">
         <div className="relative z-10">
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">

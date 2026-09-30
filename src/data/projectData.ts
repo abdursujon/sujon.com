@@ -25,8 +25,8 @@ export const projects: Project[] = [
     imageUrl: '/projects/project3.png',
     title: 'Analytics Engine',
     period: 'Dec 2025 - Present',
-    tools: ["Java", "Spring Boot", "JPA", "H2", "Gradle", "JUnit 5", "MockMvc", "Swagger/OpenAPI", "Docker", "AWS EC2", "React", "TypeScript"],
-    description: 'A data-profiling REST API built with Spring Boot, designed as a building block that could sit inside a larger data pipeline. Upload a CSV or Parquet file and it infers column types, counts nulls and unique values, and calculates min, max, mean, median, standard deviation and percentiles from p25 to p99. Each analysis is stored so it can be retrieved, downloaded as JSON or deleted through the API, and repeat uploads are detected with SHA-256 content hashing and served straight from cache. The API is documented with Swagger/OpenAPI, monitored with Spring Actuator, covered by unit and integration tests, and deployed on AWS EC2 with a React and TypeScript web UI on top.',links: [
+    tools: ["Java", "Spring Boot", "AWS EC2", "JUnit 5", "MockMvc",  "JPA", "H2", "Gradle", "Docker", "React", "TypeScript"],
+    description: 'A data-profiling REST API built with Spring Boot, designed as a building block that could sit inside a larger data pipeline. Upload a CSV or Parquet file and it infers column types, counts nulls and unique values, and calculates min, max, mean, median, standard deviation and percentiles from p25 to p99. Each analysis is stored so it can be retrieved, downloaded as JSON or deleted through the API, and repeat uploads are detected with SHA-256 content hashing and served straight from cache. The API is documented with Swagger/OpenAPI, monitored with Spring Actuator, covered by unit and integration tests, and deployed on AWS EC2 with a React and TypeScript web UI on top. This allow users to use the API directly on the website and and through terminal.',links: [
       { label: 'Github', href: 'https://github.com/abdursujon/analytics-engine.git', IconComponent: GithubLogoIcon },
       { label: 'Launch', href: 'https://abdursujon.github.io/analytics-engine-ui/' },
     ],
@@ -37,10 +37,15 @@ export const projects: Project[] = [
     title: 'PetWatch: Community Lost-Pet Tracker',
     period: 'Dec 2025 - Present',
     tools: ["PHP", "MariaDB", "JavaScript (ES6)", "AJAX", "Leaflet", "OpenStreetMap", "Nominatim API", "Bootstrap 5", "MVC"],
-    description: 'A community lost-pet tracker I built in plain PHP using an MVC architecture, with no frameworks or build step. Owners post their lost pets with photos and details, and other users report sightings by clicking the map or using their device\'s GPS. Every sighting is plotted on an interactive Leaflet map with marker clustering, and coordinates are turned into street addresses through a disk-cached Nominatim geocoder to stay within rate limits. It also includes debounced live search with ranked suggestions, infinite scroll, filtering and sorting, and session-based authentication with login rate limiting, role-based navigation and token-checked AJAX endpoints.',
+    description: 'A demo community lost-pet tracker in plain PHP using an MVC architecture, with no frameworks or build step. Owners post their lost pets with photos and details, and other users report sightings by clicking the map or using their device\'s GPS. Every sighting is plotted on an interactive Leaflet map with marker clustering, and coordinates are turned into street addresses through a disk-cached Nominatim geocoder to stay within rate limits. It also includes debounced live search with ranked suggestions, infinite scroll, filtering and sorting, and session-based authentication with login rate limiting, role-based navigation and token-checked AJAX endpoints.',
     links: [
       { label: 'Github', href: 'https://github.com/abdursujon/petwatch.git', IconComponent: GithubLogoIcon },
-      { label: 'Launch', href: 'https://sickly-impostors.poseidon.salford.ac.uk/clientserver/index.php' },
+      { label: 'Launch Demo', href: 'https://sickly-impostors.poseidon.salford.ac.uk/clientserver/index.php' },
+      {
+        label: 'Want this live for your community? Get in touch',
+        href: `mailto:${contactDestinations.emailAddress}?subject=Interested in making petwatch demo project live for my community`,
+        IconComponent: EnvelopeSimpleIcon,
+      },
     ],
   },
   {
@@ -66,7 +71,7 @@ export const projects: Project[] = [
       { label: 'View Group Project Report', href: '/University_of_salford_hackcamp_group_39_report.pdf'},
       {
         label: 'Contact me for code',
-        href: `mailto:${contactDestinations.emailAddress}?subject=Final Year Project code`,
+        href: `mailto:${contactDestinations.emailAddress}?subject=Find a placement project code (BCS Manchester)`,
         IconComponent: EnvelopeSimpleIcon,
       },
     ],
@@ -76,8 +81,8 @@ export const projects: Project[] = [
     imageUrl: '/projects/project6.png',
     title: 'Problem Solving Patterns',
     period: 'Aug 2026 - Present',
-    tools: ["Python", "Data Structures", "Algorithms", "LeetCode"],
-    description: 'A growing collection of the problem-solving patterns behind most coding interview questions, written in Python. Each pattern comes with an explanation of when to use it, its pros and cons and the problems it typically solves, alongside a working implementation and solved LeetCode problems. The aim is to recognise which approach a question needs just by reading it. So far 8 of 23 planned patterns are complete, including two pointers, sliding window, fast and slow pointers, modified binary search and tree depth-first search.',
+    tools: ["Python","LeetCode"],
+    description: 'A growing collection of the problem-solving patterns behind most coding interview questions, written in Python. Each pattern comes with an explanation of when to use it, its pros and cons and the problems it typically solves, alongside a working implementation and solved LeetCode problems. The aim is to recognise which approach a question needs just by reading it and improve problem solving skill.',
     links: [
       { label: 'Github', href: 'https://github.com/abdursujon/problem-solving-patterns.git', IconComponent: GithubLogoIcon },
     ],
@@ -85,12 +90,12 @@ export const projects: Project[] = [
   {
     slug: 'project-seven',
     imageUrl: '/projects/project7.png',
-    title: 'Get Template for This Website',
+    title: 'Template for This Website',
     period: 'Sept 2026 - Present',
     tools: ["React", "TypeScript", "Vite", "Tailwind CSS", "Netlify", "GitHub GraphQL API", "Phosphor Icons", "oxlint"],
-    description: 'The open-source template behind this portfolio, built from scratch with React 19, TypeScript and Tailwind CSS. Every section reads from a typed data file, so adding a project, job or artwork means editing one array rather than the markup. A Netlify Function queries the GitHub GraphQL API to render a live two-year contribution calendar, and the site supports light and dark mode with a system-preference fallback. It also includes drawing and digital-art galleries, terms and privacy dialogs, a reusable UI component kit and a mobile-first responsive layout, deployed on Netlify with continuous deployment.',
+    description: 'The template behind this portfolio, built from scratch with React 19, TypeScript and Tailwind CSS. Every section reads from a typed data file, so adding a project, job or artwork means editing one array rather than the markup. A Netlify Function queries the GitHub GraphQL API to render a live two-year contribution calendar, and the site supports light and dark mode with a system-preference fallback. It also includes drawing and digital-art galleries, terms and privacy dialogs, a reusable UI component kit and a mobile-first responsive layout, deployed on Netlify with continuous deployment.',
     links: [
-      { label: 'Github', href: 'https://github.com/abdursujon/sujon.com.git', IconComponent: GithubLogoIcon },
+      { label: 'GET TEMPLATE', href: 'https://github.com/abdursujon/sujon.com.git', IconComponent: GithubLogoIcon },
       { label: 'Launch', href: 'https://sujons.com' },
     ],
   },

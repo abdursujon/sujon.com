@@ -2,12 +2,12 @@
 import '../../style/nav.css'
 import {
   HouseLineIcon,
-  UserCircleIcon,
   MoonStarsIcon,
   SunDimIcon,
-  FolderOpenIcon,
   ListIcon,
   XIcon,
+  FileTextIcon, 
+  CodeIcon
 } from '@phosphor-icons/react'
 import { useTheme } from '../../hooks/useTheme'
 import { useRef, useState, useEffect, useCallback } from 'react'
@@ -125,8 +125,8 @@ export function Navbar() {
       </div>
 
       <a href="#hero" className="nav-item" data-label="Home"><HouseLineIcon size={20} /></a>
-      <a href="/abdur_rahim_sujon_web_cv.pdf" target="_blank" className="nav-item" data-label="CV"><UserCircleIcon size={20} /></a>
-      <a href="#projects" className="nav-item" data-label="Projects"><FolderOpenIcon size={20} /></a>
+      <a href="/abdur_rahim_sujon_web_cv.pdf" target="_blank" className="nav-item" data-label="CV"><FileTextIcon size={20} /></a>
+      <a href="#projects" className="nav-item" data-label="Projects"><CodeIcon size={20} /></a>
       <div className="nav-divider" />
 
       <button onClick={toggleTheme} className="nav-item" aria-label="Toggle theme">

@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react'
 import { SectionLabel } from '../components/ui/SectionLabel'
 import type { ContributionYear } from '../types/contribution'
+import {
+  GithubLogoIcon,
+  type Icon,
+} from '@phosphor-icons/react'
 
 const CONTRIBUTION_LEVEL_COLOR_VARS = [
   'var(--color-contribution-0)',
@@ -160,9 +164,14 @@ export function Github() {
           href="https://github.com/abdursujon"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs uppercase tracking-[0.2em] text-ink-muted transition-colors hover:text-ink"
+          className="inline-flex items-center gap-2 text-x tracking-[0.2em] text-ink-muted transition-colors hover:text-ink"
         >
-          github.com/abdursujon · updated daily
+          <GithubLogoIcon size={15} className="shrink-0" aria-hidden="true" />
+          <span className="flex flex-col sm:flex-row sm:gap-2">
+            <span>github.com/abdursujon</span>
+            <span className="hidden sm:inline" aria-hidden="true">·</span>
+            <span>stats updated daily</span>
+          </span>
         </a>
       </div>
     </section>
