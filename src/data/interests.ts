@@ -12,6 +12,8 @@ export interface Interest {
   IconComponent: Icon
   actionLabel: string
   href: string
+  platformLabel: string
+  tintColor: string
 }
 
 export const interests: Interest[] = [
@@ -21,6 +23,8 @@ export const interests: Interest[] = [
     IconComponent: SoccerBallIcon,
     actionLabel: 'Lets play a game together. Add me on Footy Addicts"',
     href: 'https://footyaddicts.com/players/sujon',
+    platformLabel: 'Footy Addicts',
+    tintColor: '#22c55e',
   },
   {
     slug: 'hiking',
@@ -28,6 +32,8 @@ export const interests: Interest[] = [
     IconComponent: PersonSimpleHikeIcon,
     actionLabel: 'Does mountain makes you happy too? Message me on Instagram so we can hike together',
     href: 'https://instagram.com/abdur.sujon',
+    platformLabel: 'Instagram',
+    tintColor: '#f59e0b',
   },
   {
     slug: 'cricket',
@@ -35,6 +41,8 @@ export const interests: Interest[] = [
     IconComponent: CricketIcon,
     actionLabel: 'Invite me for a match on Instagram',
     href: 'https://instagram.com/abdur.sujon',
+    platformLabel: 'Instagram',
+    tintColor: '#ef4444',
   },
   {
     slug: 'music',
@@ -42,5 +50,7 @@ export const interests: Interest[] = [
     IconComponent: MusicNotesIcon,
     actionLabel: 'Hear what I listen to on Spotify',
     href: 'https://open.spotify.com/user/31xhjwnwn6mdcemhleot6aclqkqe?si=hKSsUQkSQr2vm_hi2mESMg&utm_source=copy-link',
+    platformLabel: 'Spotify',
+    tintColor: '#8b5cf6',
   },
 ]

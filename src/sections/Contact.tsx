@@ -7,12 +7,12 @@ export function Contact() {
   const { emailAddress, linkedinUrl, githubUrl, githubHandle } = contactDestinations
 
   return (
-    <section id="contact" className="mx-auto w-full max-w-5xl px-6 py-20">
+    <section id="contact" className="mx-auto w-full max-w-6xl px-6 pb-25">
       <div className="grid-card rounded-[40px] px-6 py-16 md:px-16">
         <div className="relative z-10 flex flex-col items-center text-center">
-          <SectionLabel>Contact</SectionLabel>
+          <SectionLabel className="bg-chip">Contact</SectionLabel>
 
-          <h2 className="mt-8 font-display text-5xl font-medium text-ink md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl text-ink md:text-5xl">
             Get in Touch
           </h2>
           <p className="mt-4 text-lg text-ink-muted md:text-xl">
@@ -23,9 +23,9 @@ export function Contact() {
         <div className="relative z-10 mt-12 grid gap-6 md:grid-cols-2">
           <a
             href={`mailto:${emailAddress}`}
-            className="flex flex-col rounded-[28px] border border-[#bfe6ef] bg-[#e8f7fa] p-6 md:p-8 transition hover:-translate-y-1 dark:border-white/10 dark:bg-white/5"
+            className="flex flex-col rounded-[28px] border border-[#bfe6ef] bg-[#e8f7fa] p-6 md:p-8 transition hover:-translate-y-1 dark:border-[#2f5f70] dark:bg-[#21343f]"
           >
-            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0f7d8c] dark:text-accent">
+            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#0f7d8c] dark:text-[#83e6fc]">
               Via Email
             </span>
             <span className="mt-4 text-2xl font-semibold text-ink">Reach out</span>
@@ -38,9 +38,9 @@ export function Contact() {
             href={linkedinUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex flex-col rounded-[28px] border border-[#f0dfae] bg-[#fdf6e3] p-6 md:p-8 transition hover:-translate-y-1 dark:border-white/10 dark:bg-white/5"
+            className="flex flex-col rounded-[28px] border border-[#f0dfae] bg-[#fdf6e3] p-6 md:p-8 transition hover:-translate-y-1 dark:border-[#6b5227] dark:bg-[#3c2e24]"
           >
-            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#a8751a] dark:text-[#e0b860]">
+            <span className="text-sm font-semibold uppercase tracking-[0.18em] text-[#a8751a] dark:text-[#f5d544]">
               Via LinkedIn
             </span>
             <span className="mt-4 text-2xl font-semibold text-ink">Message me directly</span>
@@ -56,7 +56,7 @@ export function Contact() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Connect on GitHub, @${githubHandle}`}
-            className="group relative flex size-14 items-center justify-center rounded-full border border-ink/10 bg-white/60 text-ink transition-colors hover:border-accent/40 hover:text-accent dark:bg-white/5"
+            className="group relative flex size-14 items-center justify-center rounded-full border border-ink/15 bg-chip text-ink shadow-md transition-colors hover:text-accent"
           >
             <GithubLogoIcon size={24} />
 

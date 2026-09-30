@@ -13,8 +13,8 @@ export function Values() {
     )
 
   return (
-    <section id="values" className="mx-auto w-full max-w-4xl px-6 py-20">
-      <div className="rounded-[40px] border border-ink/5 bg-white/70 p-8 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] md:p-12 dark:bg-white/5">
+    <section id="values" className="mx-auto w-full max-w-4xl px-6 pb-25">
+      <div className="rounded-3xl border border-ink/5 bg-card p-6 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] md:p-8">
         <div className="flex items-center gap-4">
           <span className="flex size-12 shrink-0 items-center justify-center rounded-full bg-accent/10 text-accent">
             <CompassIcon size={22} />

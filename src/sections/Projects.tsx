@@ -18,7 +18,7 @@ export function Projects() {
   const hasHiddenProjects = projects.length > INITIALLY_VISIBLE_PROJECT_COUNT
 
   return (
-    <section id="projects" className="mx-auto w-full max-w-6xl px-6 py-20">
+    <section id="projects" className="mx-auto w-full max-w-6xl px-6 pb-25">
       <div className="flex flex-col items-center text-center">
         <SectionLabel>Selected Projects</SectionLabel>
         <h2 className="mt-6 font-display text-4xl text-ink md:text-5xl">

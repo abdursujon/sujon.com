@@ -22,10 +22,9 @@
 - Footer x
 - Privacy Policy x
 - Terms and Disclaimer x
+- Security check for full project x
 
-- Security check for full project 
-
-3. Deploy the project to netlify and do security check 
+3. Deploy the project to netlify and do security check and Do a post in linkedin 
 
 4. Fix CV
    a) One for AI 

@@ -3,7 +3,7 @@ import { socialLinks } from '../data/socialLinks'
 
 export function Social() {
   return (
-    <section id="social" className="flex flex-col items-center gap-6 px-6 pb-20">
+    <section id="social" className="flex flex-col items-center gap-6 px-6 pb-25">
       <ul className="flex items-center gap-7">
         {socialLinks.map(({ label, href, IconComponent }) => {
           const opensInNewTab = href.startsWith('http')

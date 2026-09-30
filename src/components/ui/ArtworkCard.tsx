@@ -2,7 +2,7 @@ import type { Artwork } from '../../types/artwork'
 
 export function ArtworkCard({ title, medium, year, imageUrl }: Artwork) {
   return (
-    <figure className="mb-6 break-inside-avoid overflow-hidden rounded-3xl border border-ink/5 bg-white/70 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] transition-colors hover:border-accent/40 dark:bg-white/5">
+    <figure className="mb-6 break-inside-avoid overflow-hidden rounded-3xl border border-ink/5 bg-card shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] transition-colors hover:border-accent/40">
       <div className="overflow-hidden">
         <img
           src={imageUrl}

@@ -1,6 +1,7 @@
 import type { Context } from '@netlify/functions'
 
 const CONTRIBUTION_YEARS_TO_SHOW = 2
+const ERROR_RESPONSE_CACHE_HEADERS = { 'Cache-Control': 'public, max-age=0, s-maxage=300' }
 
 const CONTRIBUTION_CALENDAR_QUERY = `
   query($user: String!, $from: DateTime!, $to: DateTime!) {
@@ -33,26 +34,35 @@ function buildCalendarYearRange(year: number) {
 async function fetchContributionCalendarForYear(githubUsername: string, year: number) {
   const { from, to } = buildCalendarYearRange(year)
 
-  const githubResponse = await fetch('https://api.github.com/graphql', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query: CONTRIBUTION_CALENDAR_QUERY,
-      variables: { user: githubUsername, from, to },
-    }),
-  })
+  try {
+    const githubResponse = await fetch('https://api.github.com/graphql', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: CONTRIBUTION_CALENDAR_QUERY,
+        variables: { user: githubUsername, from, to },
+      }),
+    })
 
-  const payload = await githubResponse.json()
-  return payload?.data?.user?.contributionsCollection?.contributionCalendar ?? null
+    if (!githubResponse.ok) return null
+
+    const payload = await githubResponse.json()
+    return payload?.data?.user?.contributionsCollection?.contributionCalendar ?? null
+  } catch {
+    return null
+  }
 }
 
 export default async function fetchGithubContributionYears(_request: Request, _context: Context) {
   const githubUsername = process.env.GITHUB_USERNAME
   if (!githubUsername) {
-    return Response.json({ error: 'GITHUB_USERNAME not configured' }, { status: 500 })
+    return Response.json(
+      { error: 'GITHUB_USERNAME not configured' },
+      { status: 500, headers: ERROR_RESPONSE_CACHE_HEADERS },
+    )
   }
 
   const latestYear = new Date().getUTCFullYear()
@@ -66,7 +76,10 @@ export default async function fetchGithubContributionYears(_request: Request, _c
   )
 
   if (calendarPerYear.some((calendar) => calendar === null)) {
-    return Response.json({ error: 'contributions unavailable' }, { status: 502 })
+    return Response.json(
+      { error: 'contributions unavailable' },
+      { status: 502, headers: ERROR_RESPONSE_CACHE_HEADERS },
+    )
   }
 
   const contributionYears = yearsToFetch.map((year, yearIndex) => ({

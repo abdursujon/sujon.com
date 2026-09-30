@@ -14,7 +14,7 @@ export const educationEntries: EducationEntry[] = [
     slug: 'college',
     institution: 'Feni Govt. College',
     qualification: 'Higher Secondary Certificate',
-    logoUrl: 'https://fgc.gov.bd/backend_images/8448setting.png',
+    logoUrl: '/feni_govt_college.png',
     period: '2019 - 2020',
     href: 'https://fgc.gov.bd/',
     academicResults: ['Grade: A'],

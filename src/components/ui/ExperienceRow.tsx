@@ -16,7 +16,7 @@ export function ExperienceRow({
   const detailItems = details ?? []
 
   return (
-    <li className="rounded-[40px] border border-transparent bg-white/70 px-8 py-6 shadow-[0_20px_50px_-35px_rgba(25,35,38,0.4)] transition-colors hover:border-accent/40 dark:bg-white/5">
+    <li className="rounded-3xl border border-ink/5 bg-card px-6 py-6 md:px-8 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] transition-colors hover:border-accent/40">
       <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
         {logoUrl ? (
           <img

@@ -21,7 +21,7 @@ export const socialLinks: SocialLink[] = [
   { label: 'Email', href: `mailto:${EMAIL_ADDRESS}`, IconComponent: EnvelopeSimpleIcon },
   { label: 'GitHub', href: GITHUB_URL, IconComponent: GithubLogoIcon },
   { label: 'LinkedIn', href: LINKEDIN_URL, IconComponent: LinkedinLogoIcon },
-  { label: 'LinkedIn', href: INSTAGRAM_URL, IconComponent:InstagramLogoIcon },
+  { label: 'Instagram', href: INSTAGRAM_URL, IconComponent: InstagramLogoIcon },
 ]
 
 export const contactDestinations = {

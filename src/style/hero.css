@@ -1,5 +1,5 @@
 .hero-card {
-  --hero-card-bg: color-mix(in oklab, white 72%, transparent);
+  --hero-card-bg: var(--color-card);
   --hero-card-border: rgba(0, 0, 0, 0.06);
   --hero-grid-line: rgba(0, 0, 0, 0.05);
   --hero-grid-cell: 25px;
@@ -69,7 +69,6 @@
 }
 
 .dark .hero-card {
-  --hero-card-bg: color-mix(in oklab, #152b2b 55%, transparent);
   --hero-card-border: rgba(255, 255, 255, 0.08);
   --hero-grid-line: rgba(255, 255, 255, 0.04);
   --frame-outer: rgba(78, 86, 81, 0.55);

@@ -17,19 +17,25 @@
   --color-contribution-3: #4ba8a0;
   --color-contribution-4: #06707e;
   --color-accent: #06707e;
+  --color-card: whitesmoke;
+  --color-pill: #e9ecee;
+  --color-chip: #ebeae6;
 }
 
 .dark {
-  --color-surface: #0d1b1b;
+  --color-surface: #141d22;
   --color-ink: #f5f5f5;
   --color-ink-muted: #9ca3af;
   --color-grid-line: rgba(255, 255, 255, 0.025);
-   --color-contribution-0: rgba(255, 255, 255, 0.05);
+  --color-contribution-0: rgba(255, 255, 255, 0.05);
   --color-contribution-1: #0e3b3d;
   --color-contribution-2: #14605f;
   --color-contribution-3: #1d8a85;
   --color-contribution-4: #3fc4b8;
-   --color-accent: #3fc4b8;
+  --color-accent: #3fc4b8;
+  --color-card: #2c3338;
+  --color-pill: #3a4248;
+  --color-chip: #1a2126;
 }
 
 @layer base {
@@ -38,8 +44,8 @@
     color: var(--color-ink);
     background-color: var(--color-surface);
     background-image:
-      radial-gradient(ellipse 50% 40% at 10% 20%, var(--blob-1), transparent 60%),
-      radial-gradient(ellipse 70% 50% at 90% 50%, var(--blob-2), transparent 60%),
+      radial-gradient(ellipse 50% 40% at 10% 20%, var(--blob-1), transparent 100%),
+      radial-gradient(ellipse 50% 40% at 95% 45%, var(--blob-2), transparent 100%),
       linear-gradient(to right, var(--color-grid-line) 1px, transparent 1px),
       linear-gradient(to bottom, var(--color-grid-line) 1px, transparent 1px);
     background-size:
@@ -65,11 +71,11 @@
 }
 
 :root {
-  --blob-1: rgba(115, 255, 248, 0.28);
-  --blob-2: rgba(253, 230, 211, 0.55);
+  --blob-1: rgba(80, 108, 122, 0.35);
+  --blob-2: rgba(145, 118, 78, 0.2);
 }
 
 .dark {
   --blob-1: rgba(80, 180, 220, 0.12);
-  --blob-2: rgba(247, 214, 199, 0.06);
+  --blob-2: rgba(184, 124, 96, 0.164);
 }

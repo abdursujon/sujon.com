@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import { SectionLabel } from '../components/ui/SectionLabel'
 import type { ContributionYear } from '../types/contribution'
 import {
-  GithubLogoIcon,
-  type Icon,
+  GithubLogoIcon
 } from '@phosphor-icons/react'
 
 const CONTRIBUTION_LEVEL_COLOR_VARS = [
@@ -96,16 +95,16 @@ export function Github() {
   }
 
   return (
-    <section id="github" className="mx-auto w-full max-w-6xl px-6 py-20">
+    <section id="github" className="mx-auto w-full max-w-6xl px-6 pb-25">
       <div className="flex flex-col items-center text-center">
         <SectionLabel>GitHub</SectionLabel>
         <h2 className="mt-6 font-display text-4xl text-ink md:text-5xl">
-          Github Contribution
+          GitHub Contributions
         </h2>
       </div>
 
       <div className="mt-12 grid gap-6 lg:grid-cols-[1fr_auto]">
-        <div className="rounded-3xl border border-ink/5 bg-white/70 p-6 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] dark:bg-white/5">
+        <div className="rounded-3xl border border-ink/5 p-6 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] bg-card">
           {hasLoadFailed ? (
             <p className="text-sm text-ink-muted">Couldn&apos;t load contributions.</p>
           ) : (
@@ -144,19 +143,21 @@ export function Github() {
           )}
         </div>
 
-        <div className="flex flex-col justify-center gap-4 rounded-3xl border border-ink/5 bg-white/70 p-8 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] lg:w-72 dark:bg-white/5">
-          {contributionYears.map(({ year, totalContributions }, yearIndex) => (
-            <div key={year}>
-              {yearIndex > 0 && (
-                <div className="mb-4 h-px w-full bg-linear-to-r from-transparent via-ink/15 to-transparent" />
-              )}
-              <p className="font-display text-3xl text-ink">{totalContributions}</p>
-              <p className="mt-1 text-xs uppercase tracking-[0.18em] text-ink-muted">
-                Contributions in {year}
-              </p>
-            </div>
-          ))}
-        </div>
+        {contributionYears.length > 0 && (
+          <div className="flex flex-col justify-center gap-4 rounded-3xl border border-ink/5 bg-card p-6 shadow-[0_20px_50px_-30px_rgba(25,35,38,0.35)] lg:w-72">
+            {contributionYears.map(({ year, totalContributions }, yearIndex) => (
+              <div key={year}>
+                {yearIndex > 0 && (
+                  <div className="mb-4 h-px w-full bg-linear-to-r from-transparent via-ink/15 to-transparent" />
+                )}
+                <p className="font-display text-3xl text-ink">{totalContributions}</p>
+                <p className="mt-1 text-xs uppercase tracking-[0.18em] text-ink-muted">
+                  Contributions in {year}
+                </p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="mt-8 flex justify-center">
@@ -164,7 +165,7 @@ export function Github() {
           href="https://github.com/abdursujon"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-x tracking-[0.2em] text-ink-muted transition-colors hover:text-ink"
+          className="inline-flex items-center gap-2 text-xs tracking-[0.2em] text-ink-muted transition-colors hover:text-ink"
         >
           <GithubLogoIcon size={15} className="shrink-0" aria-hidden="true" />
           <span className="flex flex-col sm:flex-row sm:gap-2">

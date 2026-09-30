@@ -11,10 +11,9 @@ export const projects: Project[] = [
     tools: ["Python", "PyTorch", "OpenCLIP", "ONNX Runtime", "OpenCV", "C++ (Arduino)", "ESP32-CAM", "Raspberry Pi", "Flask", "SQLite", "Telegram Bot API"],
     description: 'A final year research project where I\'m building a low-cost embedded kitchen stock tracker. An ESP32-CAM inside the cupboard wakes when the door is closed, photographs the shelf and sends it to a Raspberry Pi, which identifies each jar with an open-set CLIP model, estimates fill level with OpenCV and sends low-stock alerts via Telegram. The research looks at how far CLIP can be compressed (ONNX, INT8) to run on low-power hardware while still telling apart near-identical items like sugar, salt and flour.',
     links: [
-      { label: 'Private: Code available on request', href: '', IconComponent: GithubLogoIcon },
-      { label: 'View Project Proposal', href: './yes'},
+      { label: 'Project Proposal', href: './yes'},
       {
-        label: 'Contact me for discussion',
+        label: 'Contact me for demo',
         href: `mailto:${contactDestinations.emailAddress}?subject=Final Year Project code`,
         IconComponent: EnvelopeSimpleIcon,
       },
@@ -42,7 +41,7 @@ export const projects: Project[] = [
       { label: 'Github', href: 'https://github.com/abdursujon/petwatch.git', IconComponent: GithubLogoIcon },
       { label: 'Launch Demo', href: 'https://sickly-impostors.poseidon.salford.ac.uk/clientserver/index.php' },
       {
-        label: 'Want this live for your community? Get in touch',
+        label: 'Want this live for community? Get in touch',
         href: `mailto:${contactDestinations.emailAddress}?subject=Interested in making petwatch demo project live for my community`,
         IconComponent: EnvelopeSimpleIcon,
       },
@@ -68,7 +67,6 @@ export const projects: Project[] = [
     tools:["JavaScript", "PHP", "SQLite", "MVC", "SCRUM"],
     description: 'Placement platform built for BCS Manchester to boost undergraduate placement uptake by matching students with employers offering year-long industrial placements. Serves students, employers, career staff, and admins. Responsive PHP app with SQLite backend, Bootstrap UI, and JavaScript, with matching logic aligned to SFIA v8.',
     links: [
-      { label: 'View Group Project Report', href: '/University_of_salford_hackcamp_group_39_report.pdf'},
       {
         label: 'Contact me for code',
         href: `mailto:${contactDestinations.emailAddress}?subject=Find a placement project code (BCS Manchester)`,

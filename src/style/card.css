@@ -1,5 +1,5 @@
 .grid-card {
-  --card-bg: color-mix(in oklab, white 72%, transparent);
+  --card-bg: var(--color-card);
   --card-border: rgba(0, 0, 0, 0.06);
   --card-grid-line: rgba(0, 0, 0, 0.05);
   --card-grid-cell: 25px;
@@ -28,7 +28,6 @@
 }
 
 .dark .grid-card {
-  --card-bg: color-mix(in oklab, #152b2b 55%, transparent);
   --card-border: rgba(255, 255, 255, 0.08);
   --card-grid-line: rgba(255, 255, 255, 0.04);
 }
