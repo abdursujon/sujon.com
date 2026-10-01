@@ -12,7 +12,7 @@ export const projects: Project[] = [
     description: 'A final year research project where I\'m building a low-cost embedded kitchen stock tracker. An ESP32-CAM inside the cupboard wakes when the door is closed, photographs the shelf and sends it to a Raspberry Pi, which identifies each jar with an open-set CLIP model, estimates fill level with OpenCV and sends low-stock alerts via Telegram. The research looks at how far CLIP can be compressed (ONNX, INT8) to run on low-power hardware while still telling apart near-identical items like sugar, salt and flour.',
     links: [
       {
-        label: 'Contact me for demo',
+        label: 'Contact me for discussion',
         href: `mailto:${contactDestinations.emailAddress}?subject=Final Year Project code`,
         IconComponent: EnvelopeSimpleIcon,
       },
