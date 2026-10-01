@@ -11,7 +11,6 @@ export const projects: Project[] = [
     tools: ["Python", "PyTorch", "OpenCLIP", "ONNX Runtime", "OpenCV", "C++ (Arduino)", "ESP32-CAM", "Raspberry Pi", "Flask", "SQLite", "Telegram Bot API"],
     description: 'A final year research project where I\'m building a low-cost embedded kitchen stock tracker. An ESP32-CAM inside the cupboard wakes when the door is closed, photographs the shelf and sends it to a Raspberry Pi, which identifies each jar with an open-set CLIP model, estimates fill level with OpenCV and sends low-stock alerts via Telegram. The research looks at how far CLIP can be compressed (ONNX, INT8) to run on low-power hardware while still telling apart near-identical items like sugar, salt and flour.',
     links: [
-      { label: 'Project Proposal', href: './yes'},
       {
         label: 'Contact me for demo',
         href: `mailto:${contactDestinations.emailAddress}?subject=Final Year Project code`,
