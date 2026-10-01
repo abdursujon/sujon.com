@@ -8,7 +8,7 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Manchester, UK',
     period: 'Dec 2024 - Jan 2026',
     logoUrl: 'https://www.google.com/s2/favicons?domain=salford.ac.uk&sz=128',
-    href: 'https://blogs.salford.ac.uk/salford-giving/2025/02/20/hackcamp-2025-inspiring-future-tech-leaders-through-real-world-challenges-and-industry-collaboration/',
+    href: 'https://www.bcs.org/deliver-and-teach-qualifications/academic-accreditation/practice-highlights/university-of-salford-hackcamp/',
     details: [
       'Acted as Scrum master and developed a full-stack software solution as part of a team of seven for BCS Manchester that helps students find a placement.',
       'Implemented software development life cycle (SDLC) procedures and collected user requirements while directing team organisation and Agile methodologies using Jira.',
