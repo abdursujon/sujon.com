@@ -33,7 +33,7 @@ export function About() {
         <p>
           Outside of coding, you&apos;ll find me playing football and cricket, hiking up a mountain, or
           discovering new music. You can read more about my background in my{' '}
-          <InlineLink href="/abdur_rahim_sujon_web_cv.pdf">CV</InlineLink>.
+          <InlineLink href="/abdur_rahim_sujon_cv.pdf">CV</InlineLink>.
         </p>
       </div>
     </section>
