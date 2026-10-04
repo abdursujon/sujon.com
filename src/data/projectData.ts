@@ -6,10 +6,10 @@ export const projects: Project[] = [
   {
     slug: 'project-one',
     imageUrl: '/projects/project1.jpg',
-    title: 'Embedded AI-Based Smart Kitchen Inventory Tracking System Using Raspberry Pi, Battery-Powered ESP32-CAM, Reed Switch Door Detection, LED, INT8 Quantised CLIP and OpenCV',
+    title: 'Edge AI Inventory Recognition System for Visually Similar Items Using Compressed Open-Set CLIP and an ESP32-CAM',
     period: 'Sept 2026 - Present',
-    tools: ["Python", "PyTorch", "OpenCLIP", "ONNX Runtime", "OpenCV", "C++ (Arduino)", "ESP32-CAM", "Raspberry Pi", "Flask", "SQLite", "Telegram Bot API"],
-    description: 'A final year research project where I\'m building a low-cost embedded kitchen stock tracker. An ESP32-CAM inside the cupboard wakes when the door is closed, photographs the shelf and sends it to a Raspberry Pi, which identifies each jar with an open-set CLIP model, estimates fill level with OpenCV and sends low-stock alerts via Telegram. The research looks at how far CLIP can be compressed (ONNX, INT8) to run on low-power hardware while still telling apart near-identical items like sugar, salt and flour.',
+    tools: ["Python", "PyTorch", "OpenCLIP", "ONNX Runtime", "OpenCV", "C++ (Arduino)", "ESP32-CAM", "Flask", "SQLite", "Telegram Bot API", "Docker"],
+    description: 'A final year research project where I\'m building a low-cost inventory tracking system. An ESP32-CAM at a scanning point photographs an item at the press of a button and sends it over Wi-Fi to a local processing unit, which identifies it with an open-set CLIP model, estimates its fill level with OpenCV and sends low-stock alerts via Telegram. New items are added with a text label alone, so the system works anywhere from a kitchen to an electronics lab. The research focuses on telling apart items that differ only by texture, such as sugar, salt and flour, and on how far CLIP can be compressed (ONNX, INT8, MobileCLIP) for low-compute hardware without losing that accuracy.',
     links: [
       {
         label: 'Contact me for discussion',
