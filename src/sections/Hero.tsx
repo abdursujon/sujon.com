@@ -3,7 +3,7 @@ import profileImg from '../assets/home-page-assets/profile.png'
 
 export function Hero() {
   return (
-    <section id="hero" className="flex justify-center px-6 pt-36 pb-15">
+    <section id="hero" className="flex justify-center px-6 pt-45 pb-25">
       <div className="hero-card grid w-full max-w-2xl grid-cols-1 items-center gap-8 rounded-[28px] px-6 py-8 md:px-10 md:py-10 lg:grid-cols-[1fr_auto]">
         <div className="relative z-10 text-center lg:text-left">
           <h1 className="font-display text-4xl leading-tight sm:text-5xl md:text-6xl">Abdur Sujon</h1>
